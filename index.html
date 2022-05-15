@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <header class="hero is-primary is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Weather Dashboard
+                </h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container columns">
+            <aside class="section panel column is-one-fifth m-5">
+                <p class="panel-heading">
+                    Search for a City
+                </p>
+                <div class="panel-block">
+                    <p class="control has-icon">
+                        <input class="input is-small" type="text" placeholder="Denver">
+                    </p>
+                </div>
+                <button class="button control is-focused is-small is-fullwidth is-rounded is-primary">Search</button>
+                <a class="panel-block is-focused">
+                    Austin
+                </a>
+                <a class="panel-block is-focused">
+                    Chicago
+                </a>
+                <a class="panel-block is-focused">
+                    New York
+                </a>
+                <a class="panel-block is-focused">
+                    Orlando
+                </a>
+                <a class="panel-block is-focused">
+                    San Francisco
+                </a>
+                <a class="panel-block is-focused">
+                    San Diego
+                </a>
+                <a class="panel-block is-focused">
+                    Seattle
+                </a>
+                <a class="panel-block is-focused">
+                    Atlanta
+                </a>
+            </aside>
+
+            <section class="container column">
+                <div class="box section">
+                    <h2 class="title">City</h2>
+                    <p>Temp:</p>
+                    <p>Wind:</p>
+                    <p>Humitidy:</p>
+                    <p>UV Index:</p>
+                </div>
+
+                <div class="box section">
+                    <div class="heading">
+                        <h1 class="title">5-Day Forecast:</h1>
+                    </div>
+                    <div class="container columnsm-5">
+                        <div class="card column">
+                            <p class="date card-title"></p>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card column">
+                            <p class="date card-title"></p>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card column">
+                            <p class="date card-title"></p>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card column">
+                            <p class="date card-title"></p>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card column">
+                            <p class="date card-title"></p>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <script src="./assets/script.js"></script>
+    </main>
+</body>
+
+</html>
