@@ -27,75 +27,76 @@
                 </p>
                 <div class="panel-block">
                     <p class="control has-icon">
-                        <input class="input is-small" type="text" placeholder="Denver">
+                        <input id="search-input" class="input is-small" type="text" placeholder="Denver">
                     </p>
                 </div>
-                <button class="button control is-focused is-small is-fullwidth is-rounded is-primary">Search</button>
-                <a class="panel-block is-focused">
+                <button id="search-btn"
+                    class="button control is-focused is-small is-fullwidth is-rounded is-primary">Search</button>
+                <a id="auistin" class="panel-block is-focused">
                     Austin
                 </a>
-                <a class="panel-block is-focused">
+                <a id="chicago" class="panel-block is-focused">
                     Chicago
                 </a>
-                <a class="panel-block is-focused">
+                <a id="new-york" class="panel-block is-focused">
                     New York
                 </a>
-                <a class="panel-block is-focused">
+                <a id="orlando" class="panel-block is-focused">
                     Orlando
                 </a>
-                <a class="panel-block is-focused">
+                <a id="san-francisco" class="panel-block is-focused">
                     San Francisco
                 </a>
-                <a class="panel-block is-focused">
+                <a id="san-dieago" class="panel-block is-focused">
                     San Diego
                 </a>
-                <a class="panel-block is-focused">
+                <a id="seattle" class="panel-block is-focused">
                     Seattle
                 </a>
-                <a class="panel-block is-focused">
+                <a id="atlanta" class="panel-block is-focused">
                     Atlanta
                 </a>
             </aside>
 
             <section class="container column">
-                <div class="box section">
+                <div id="current-weather" class="box section">
                     <h2 class="title">City</h2>
-                    <p>Temp:</p>
-                    <p>Wind:</p>
-                    <p>Humitidy:</p>
-                    <p>UV Index:</p>
+                    <p>Temp: <span></span></p>
+                    <p>Wind: <span></span></p>
+                    <p>Humitidy: <span></span>%</p>
+                    <p>UV Index: <span></span></p>
                 </div>
 
-                <div class="box section">
+                <div id="five-day" class="box section">
                     <div class="heading">
                         <h1 class="title">5-Day Forecast:</h1>
                     </div>
-                    <div class="container columnsm-5">
-                        <div class="card column">
+                    <div id="five-day-cards" class="container columns m-5">
+                        <div id="day1" class="card column">
                             <p class="date card-title"></p>
                             <p>Temp:</p>
                             <p>Wind:</p>
                             <p>Humidity:</p>
                         </div>
-                        <div class="card column">
+                        <div id="day2" class="card column">
                             <p class="date card-title"></p>
                             <p>Temp:</p>
                             <p>Wind:</p>
                             <p>Humidity:</p>
                         </div>
-                        <div class="card column">
+                        <div id="day3" class="card column">
                             <p class="date card-title"></p>
                             <p>Temp:</p>
                             <p>Wind:</p>
                             <p>Humidity:</p>
                         </div>
-                        <div class="card column">
+                        <div id="day4" class="card column">
                             <p class="date card-title"></p>
                             <p>Temp:</p>
                             <p>Wind:</p>
                             <p>Humidity:</p>
                         </div>
-                        <div class="card column">
+                        <div id="day5" class="card column">
                             <p class="date card-title"></p>
                             <p>Temp:</p>
                             <p>Wind:</p>
@@ -108,7 +109,8 @@
             </section>
 
         </div>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="./assets/script.js"></script>
     </main>
 </body>
