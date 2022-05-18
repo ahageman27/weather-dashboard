@@ -59,15 +59,16 @@
             </aside>
 
             <section class="container column">
-                <div id="current-weather" class="box section">
+                <div id="current-weather" class="box section m-2">
                     <h2 class="title">City</h2>
+                    <h3 class="is-size-5"></h3>
                     <p>Temp: <span></span></p>
-                    <p>Wind: <span></span></p>
+                    <p>Wind: <span></span> MPH</p>
                     <p>Humitidy: <span></span>%</p>
-                    <p>UV Index: <span></span></p>
+                    <p>UV Index: <span id="uvi" class="p-1"></span></p>
                 </div>
 
-                <div id="five-day" class="box section">
+                <div id="five-day" class="box section m-2">
                     <div class="heading">
                         <h1 class="title">5-Day Forecast:</h1>
                     </div>
@@ -111,6 +112,7 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
         <script src="./assets/script.js"></script>
     </main>
 </body>
