@@ -20,6 +20,7 @@
         </div>
     </header>
     <main>
+        <!-- control panel -->
         <div class="container columns">
             <aside class="section panel column is-one-fifth m-5">
                 <p class="panel-heading">
@@ -32,33 +33,9 @@
                 </div>
                 <button id="search-btn"
                     class="button control is-focused is-small is-fullwidth is-rounded is-primary">Search</button>
-                <a id="auistin" class="panel-block is-focused">
-                    Austin
-                </a>
-                <a id="chicago" class="panel-block is-focused">
-                    Chicago
-                </a>
-                <a id="new-york" class="panel-block is-focused">
-                    New York
-                </a>
-                <a id="orlando" class="panel-block is-focused">
-                    Orlando
-                </a>
-                <a id="san-francisco" class="panel-block is-focused">
-                    San Francisco
-                </a>
-                <a id="san-dieago" class="panel-block is-focused">
-                    San Diego
-                </a>
-                <a id="seattle" class="panel-block is-focused">
-                    Seattle
-                </a>
-                <a id="atlanta" class="panel-block is-focused">
-                    Atlanta
-                </a>
             </aside>
-
-            <section class="container column">
+            <!-- current weather card -->
+            <section class="container columnv is-hidden">
                 <div id="current-weather" class="box section m-2">
                     <h2 class="title">City</h2>
                     <h3 class="is-size-5"></h3>
@@ -67,42 +44,48 @@
                     <p>Humitidy: <span></span>%</p>
                     <p>UV Index: <span id="uvi" class="p-1"></span></p>
                 </div>
-
-                <div id="five-day" class="box section m-2">
+                <!-- five day card -->
+                <div id="five-day" class="box section m-2 is-hidden">
                     <div class="heading">
                         <h1 class="title">5-Day Forecast:</h1>
                     </div>
-                    <div id="five-day-cards" class="container columns m-5">
-                        <div id="day1" class="card column">
+                    <div class="container columns m-5">
+                        <div class="five-day-cards card column">
                             <p class="date card-title"></p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
+                            <img class="icon image is-48x48" src="" alt=""></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
-                        <div id="day2" class="card column">
+                        <div class="five-day-cards card column">
                             <p class="date card-title"></p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
+                            <img class="icon image is-48x48" src="" alt=""></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
-                        <div id="day3" class="card column">
+                        <div class="five-day-cards card column">
                             <p class="date card-title"></p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
+                            <img class="icon image is-48x48" src="" alt=""></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
-                        <div id="day4" class="card column">
+                        <div class="five-day-cards card column">
                             <p class="date card-title"></p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
+                            <img class="icon image is-48x48" src="" alt=""></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
-                        <div id="day5" class="card column">
+                        <div class="five-day-cards card column">
                             <p class="date card-title"></p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
+                            <img class="icon image is-48x48" src="" alt=""></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
+
                     </div>
 
                 </div>
@@ -112,7 +95,6 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
         <script src="./assets/script.js"></script>
     </main>
 </body>
