@@ -3,6 +3,9 @@ var searchInputEl = $("#search-input");
 var searchBtnEl = $("#search-btn")
 var previousSearchesEl = $(".panel")
 var currentWeatherEl = $("#current-weather");
+var currentTempEl = $("#current-temp");
+var currentWindEl = $("#current-wind");
+var currentHumidityEl = $("#current-humidity");
 var uviEl = $("#uvi");
 var fiveDayEl = $("#five-day");
 var fiveDayCardsEl = $(".five-day-cards");
@@ -18,7 +21,7 @@ var lat;
 var lon;
 
 var previousSearches = [];
-var numPreviousSearches = 8;
+var numPreviousSearches = 10;
 
 //converts unix timestamp to date
 function timeConverter(timestamp) {
@@ -78,16 +81,18 @@ function getWeather(lat, lon) {
         url: requestUrl,
         method: "GET",
     }).then(function (response) {
+        console.log(response)
         $(".is-hidden").removeClass("is-hidden")
-        currentWeatherEl.children().eq(1).text(timeConverter(response.current.sunrise));
-        currentWeatherEl.children().eq(2).text(response.current.temp + " °F");
-        currentWeatherEl.children().eq(3).text(response.current.wind_speed);
-        currentWeatherEl.children().eq(4).text(response.current.humidity);
+        currentWeatherEl.children().eq(1).text(timeConverter(response.current.dt));
+        currentWeatherEl.children().eq(2).attr("src", "http://openweathermap.org/img/wn/" + response.current.weather[0].icon + "@2x.png");
+        currentTempEl.text(response.current.temp + " °F");
+        currentWindEl.text(response.current.wind_speed);
+        currentHumidityEl.text(response.current.humidity);
         uviEl.text(response.current.uvi);
         setUVIColor(response.current.uvi);
         for (var i = 0; i < fiveDayCardsEl.length; i++) {
-            datesEl[i].textContent = timeConverter(response.daily[i + 1].dt)
-            iconEl[i].setAttribute("src", "http://openweathermap.org/img/wn/" + response.daily[i].weather[0].icon + "@2x.png")
+            datesEl[i].textContent = timeConverter(response.daily[i + 1].sunrise)
+            iconEl[i].setAttribute("src", "http://openweathermap.org/img/wn/" + response.daily[i + 1].weather[0].icon + "@2x.png")
             tempEl[i].textContent = ("Temp: " + response.daily[i + 1].temp.day + " °F")
             windEl[i].textContent = ("Wind: " + response.daily[i + 1].wind_speed + " MPH")
             humidityEl[i].textContent = ("Humidity: " + response.daily[i + 1].humidity + "%")
@@ -106,7 +111,7 @@ function setUVIColor(uvi) {
         uviEl.removeClass("has-background-success", "has-background-danger");
     }
     else if (uvi < 7) {
-        uvi.addClass("has-background-danger");
+        uviEl.addClass("has-background-danger");
         uviEl.removeClass("has-background-success", "has-background-warning");
     }
 }
