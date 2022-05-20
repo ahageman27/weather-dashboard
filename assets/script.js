@@ -60,7 +60,7 @@ function updateSearch() {
 
 //gets coordinates for input city and calls getWeather
 function getCoord(city) {
-    var requestUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=004649559d0d6a8c8744d45cc6ad0de1";
+    var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=004649559d0d6a8c8744d45cc6ad0de1";
 
     $.ajax({
         url: requestUrl,
