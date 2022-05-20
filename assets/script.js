@@ -110,7 +110,7 @@ function setUVIColor(uvi) {
         uviEl.addClass("has-background-warning");
         uviEl.removeClass("has-background-success", "has-background-danger");
     }
-    else if (uvi < 7) {
+    else {
         uviEl.addClass("has-background-danger");
         uviEl.removeClass("has-background-success", "has-background-warning");
     }
